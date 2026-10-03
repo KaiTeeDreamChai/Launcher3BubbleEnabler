@@ -7,19 +7,17 @@
 <a name="中文说明"></a>
 ## 🇨🇳 中文说明
 
-**Launcher3BubbleEnabler** 是一个专为类原生 Android 系统（AOSP / crDroid / LineageOS / PixelExperience 等）打造的极简、无侵入式 **LSPosed 模块**。
-
-它能够彻底解除桌面启动器（Launcher3）的限制，让**桌面长按所有应用图标（包括网易云音乐、老旧应用等）都能正常显示并启动「气泡小窗」（AOSP Native Bubble）**。
+这是一个为类原生 Android 系统（AOSP / crDroid / LineageOS / PixelExperience 等）制作的 **LSPosed 模块**。用于解除桌面启动器（Launcher3）的限制，让**桌面长按所有应用图标（包括国内未适配应用、老旧应用等）都能正常显示并启动「气泡小窗」（AOSP Native Bubble）**。
 
 ### 🌟 核心特性
-- 🚀 **全面解锁**：彻底解决部分应用在桌面上长按不显示“气泡”快捷方式的问题。
+- 🚀 **应用背景**：伴随这安卓17中气泡通知更新为 **Bubble Anything** ，提升了些微类原生安卓中的小窗使用体验，但是国内部分软件貌似并没有适配，于是这个项目诞生了
 - 🛡️ **极简安全**：作用域**严格仅限制在系统桌面（`com.android.launcher3`）**，绝不注入任何第三方 App，对微信、QQ、网易云、银行与各类反作弊环境 **0 侵入、0 封号风险**。
 - ⚡ **轻量高效**：运行时仅做常量返回值替换，体积不足 10KB，内存占用与性能开销忽略不计。
-- 📱 **广泛适配**：支持 Android 14 / Android 15 / Android 16 / Android 17 (QPR)，兼容搭载 Launcher3 / QuickstepLauncher 的绝大多数类原生 ROM。
+- 📱 **广泛适配**：支持 Android 14/15/16/17 (QPR)，推荐安卓17，兼容搭载 Launcher3 / QuickstepLauncher 的绝大多数类原生 ROM。
 
 ---
 
-### 🔍 逆向原理剖析
+### 🔍 逆向原理
 
 在 AOSP 原生及衍生 ROM 的系统桌面中，长按应用图标生成快捷方式菜单由 `com.android.launcher3.popup.SystemShortcut` 驱动：
 
@@ -45,14 +43,13 @@ return new SystemShortcut.BubbleShortcut(...);
 
 ---
 
-### 📦 安装与使用教程
+### 📦 安装与使用
 
-1. 确保手机已通过 **Magisk / KernelSU / APatch** 安装并激活 **LSPosed**（或 LSPosed_mod / JingMatrix 分支）。
+1. 确保手机已安装并激活 **LSPosed**（或其分支）。
 2. 在 [Releases](../../releases) 页面下载最新版 `Launcher3BubbleEnabler-v1.0.0.apk` 并安装。
-3. 打开 **LSPosed 管理器**，在模块列表中找到 **「Launcher3 气泡小窗解锁」**。
-4. 打开 **「启用模块」** 开关（模块已预设推荐作用域为 **系统桌面 / `com.android.launcher3`**）。
-5. 重启桌面（在设置中强行停止 Launcher3，或直接重启手机）。
-6. 回到桌面长按任意应用图标（如网易云音乐），即可看到气泡小窗图标已成功显示！
+3. 打开 **LSPosed 管理器**，在模块列表中找到 **「Launcher3 气泡小窗解锁」** 并启用，勾选预设推荐作用域  **系统桌面 / `com.android.launcher3`**。
+4. 重启桌面或直接重启手机。
+5. 回到桌面长按任意应用图标（如网易云音乐），即可看到气泡小窗图标已成功显示！
 
 ---
 
