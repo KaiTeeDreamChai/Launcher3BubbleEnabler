@@ -58,7 +58,7 @@ return new SystemShortcut.BubbleShortcut(...);
 
 **Launcher3BubbleEnabler** is an ultra-lightweight, non-intrusive **LSPosed module** designed for AOSP and custom ROMs (crDroid, LineageOS, PixelExperience, etc.).
 
-It removes Launcher3's hardcoded multi-window restrictions, allowing you to **launch ANY app (including stubborn apps like NetEase Cloud Music) into an AOSP native freeform bubble directly from the home screen long-press popup**.
+It removes Launcher3's hardcoded multi-window restrictions, allowing you to **launch ANY app into an AOSP native freeform bubble directly from the home screen long-press popup**.
 
 ### ✨ Highlights
 - **Universal Bubble Access**: Unlocks the conversation/app bubble shortcut for 100% of apps.
