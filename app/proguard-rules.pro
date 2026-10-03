@@ -1,0 +1,2 @@
+-keep class com.bubble.enabler.** { *; }
+-dontwarn de.robv.android.xposed.**
